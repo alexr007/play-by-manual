@@ -1,4 +1,4 @@
-package controllers
+package org.alexr.home
 
 import java.net.URL
 import java.nio.file.Paths
@@ -40,7 +40,7 @@ class HomeController @Inject()(
 
     val message =
       s"""
-         |V:2
+         |V:3
          |name: ${config.name}
          |host: ${config.host}
          |port: ${config.port}
