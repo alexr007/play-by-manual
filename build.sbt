@@ -8,8 +8,14 @@ lazy val root = (project in file("."))
 
 scalaVersion := "2.13.1"
 
-libraryDependencies += guice
-libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "5.0.0" % Test
+libraryDependencies ++= Seq(
+  guice,
+  "com.github.pureconfig" %% "pureconfig" % "0.12.0",
+  "org.scalatestplus.play" %% "scalatestplus-play" % "5.0.0" % Test,
+)
+
+//updateConfiguration := updateConfiguration.value.withMissingOk(true)
+
 
 // Adds additional packages into Twirl
 //TwirlKeys.templateImports += "org.alexr.controllers._"

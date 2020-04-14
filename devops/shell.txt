@@ -9,3 +9,6 @@ bim/play-by-manual - should work
 
 # running docker image
 docker run --rm -p 9000:9000 play-by-manual:0.0.0 -should work
+
+# port used
+lsof -nP -iTCP:9000 | grep LISTEN

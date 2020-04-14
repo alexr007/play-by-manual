@@ -1,10 +1,11 @@
-compile
-inspect tree compile
+sbtVersion / inspect sbtVersion
+compile / inspect tree compile
 update
 run
 reload
-show version // application version
-dist
+version / show version // application version
 
+# building
+dist
 docker:publishLocal
 docker:stage
