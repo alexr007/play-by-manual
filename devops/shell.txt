@@ -1,0 +1,11 @@
+# key generation
+head -c 32 /dev/urandom | base64
+
+# target/universal
+unzip
+cd target/universal/playground-0.0.0
+bim/play-by-manual -Dplay.http.secret.key=aabbccddee
+bim/play-by-manual - should work
+
+# running docker image
+docker run --rm -p 9000:9000 play-by-manual:0.0.0 -should work

@@ -1,0 +1,10 @@
+compile
+inspect tree compile
+update
+run
+reload
+show version // application version
+dist
+
+docker:publishLocal
+docker:stage

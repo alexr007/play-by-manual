@@ -1,0 +1,3 @@
+docker images
+docker rmi xxxxxxxx
+docker image prune --force

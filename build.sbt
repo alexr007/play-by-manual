@@ -1,9 +1,10 @@
 name := """play-by-manual"""
 organization := "org.alexr"
 
-version := "1.0-SNAPSHOT"
+version := s"0.${sys.env.getOrElse("BUILD_NUMBER", "0")}.0"
 
-lazy val root = (project in file(".")).enablePlugins(PlayScala)
+lazy val root = (project in file("."))
+  .enablePlugins(PlayScala, AshScriptPlugin)
 
 scalaVersion := "2.13.1"
 
